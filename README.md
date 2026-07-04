@@ -6,6 +6,25 @@
 - 😄 Pronouns: He/Him
 - ⚡ Fun fact: I've always loved programming, but I only recently started to pursue it formally. Also, I'm a lifelong Besiktas fan.
 
+---
+
+## 📂 My Projects
+
+### 🌐 Websites
+| Repository | Description |
+|---|---|
+| [example-website](https://github.com/Mustique37/example-website) | _Replace with your website repos_ |
+
+### ⚙️ APIs
+| Repository | Description |
+|---|---|
+| [example-api](https://github.com/Mustique37/example-api) | _Replace with your API repos_ |
+
+### 🏢 Memis Groep — APIs
+| Repository | Description |
+|---|---|
+| [example-memis-api](https://github.com/Mustique37/example-memis-api) | _Replace with the APIs used for Memis Groep_ |
+
 
 <!---
 Mustique37/Mustique37 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
