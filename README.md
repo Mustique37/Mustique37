@@ -11,19 +11,20 @@
 ## 📂 My Projects
 
 ### 🌐 Websites
-| Repository | Description |
-|---|---|
-| [example-website](https://github.com/Mustique37/example-website) | _Replace with your website repos_ |
+_No public website repositories yet — new website projects will be listed here._
 
-### ⚙️ APIs
+### ⚙️ APIs & Services
 | Repository | Description |
 |---|---|
-| [example-api](https://github.com/Mustique37/example-api) | _Replace with your API repos_ |
+| [geofleet-worker](https://github.com/Mustique37/geofleet-worker) | Track & trace API for fleet management — serverless JavaScript worker |
 
 ### 🏢 Memis Groep — APIs
+_APIs used for Memis Groep will be listed here._
+
+### 🧪 Practice & Experiments
 | Repository | Description |
 |---|---|
-| [example-memis-api](https://github.com/Mustique37/example-memis-api) | _Replace with the APIs used for Memis Groep_ |
+| [abcd-1dw](https://github.com/Mustique37/abcd-1dw) | Sandbox / practice repository |
 
 
 <!---
