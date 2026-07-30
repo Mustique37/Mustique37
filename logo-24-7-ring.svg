@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 1000" width="1060" height="1000" role="img" aria-label="24/7 logo met gesegmenteerde ringen en pijl naar rechtsboven">
+  <g fill="none">
+    <circle cx="450" cy="520" r="330" stroke="#17171A" stroke-width="96"/>
+    <circle cx="450" cy="520" r="330" stroke="#3A3A40" stroke-width="78"/>
+    <circle cx="450" cy="520" r="330" stroke="#A32638" stroke-width="78"
+            stroke-dasharray="172.8 172.8" transform="rotate(-15 450 520)"/>
+    <g stroke="#17171A" stroke-width="8">
+      <line x1="450" y1="145" x2="450" y2="235" transform="rotate(15 450 520)"/>
+      <line x1="450" y1="145" x2="450" y2="235" transform="rotate(45 450 520)"/>
+      <line x1="450" y1="145" x2="450" y2="235" transform="rotate(75 450 520)"/>
+      <line x1="450" y1="145" x2="450" y2="235" transform="rotate(105 450 520)"/>
+      <line x1="450" y1="145" x2="450" y2="235" transform="rotate(135 450 520)"/>
+      <line x1="450" y1="145" x2="450" y2="235" transform="rotate(165 450 520)"/>
+      <line x1="450" y1="145" x2="450" y2="235" transform="rotate(195 450 520)"/>
+      <line x1="450" y1="145" x2="450" y2="235" transform="rotate(225 450 520)"/>
+      <line x1="450" y1="145" x2="450" y2="235" transform="rotate(255 450 520)"/>
+      <line x1="450" y1="145" x2="450" y2="235" transform="rotate(285 450 520)"/>
+      <line x1="450" y1="145" x2="450" y2="235" transform="rotate(315 450 520)"/>
+      <line x1="450" y1="145" x2="450" y2="235" transform="rotate(345 450 520)"/>
+    </g>
+    <circle cx="450" cy="520" r="185" stroke="#17171A" stroke-width="76"/>
+    <circle cx="450" cy="520" r="185" stroke="#3A3A40" stroke-width="58"/>
+    <circle cx="450" cy="520" r="185" stroke="#A32638" stroke-width="58"
+            stroke-dasharray="116.24 116.24" transform="rotate(20 450 520)"/>
+    <g stroke="#17171A" stroke-width="7">
+      <line x1="450" y1="297" x2="450" y2="373" transform="rotate(0 450 520)"/>
+      <line x1="450" y1="297" x2="450" y2="373" transform="rotate(36 450 520)"/>
+      <line x1="450" y1="297" x2="450" y2="373" transform="rotate(72 450 520)"/>
+      <line x1="450" y1="297" x2="450" y2="373" transform="rotate(108 450 520)"/>
+      <line x1="450" y1="297" x2="450" y2="373" transform="rotate(144 450 520)"/>
+      <line x1="450" y1="297" x2="450" y2="373" transform="rotate(180 450 520)"/>
+      <line x1="450" y1="297" x2="450" y2="373" transform="rotate(216 450 520)"/>
+      <line x1="450" y1="297" x2="450" y2="373" transform="rotate(252 450 520)"/>
+      <line x1="450" y1="297" x2="450" y2="373" transform="rotate(288 450 520)"/>
+      <line x1="450" y1="297" x2="450" y2="373" transform="rotate(324 450 520)"/>
+    </g>
+  </g>
+  <g fill="none">
+    <circle cx="450" cy="520" r="122" stroke="#17171A" stroke-width="42"/>
+    <circle cx="450" cy="520" r="122" stroke="#FFFFFF" stroke-width="26"/>
+  </g>
+  <text x="450" y="556" text-anchor="middle"
+        font-family="'Arial Black', Arial, Helvetica, sans-serif"
+        font-weight="900" font-size="96" letter-spacing="1"
+        paint-order="stroke" stroke="#17171A" stroke-width="7"
+        fill="#E8E8EA">24/7</text>
+  <g>
+    <path d="M450,852 C660,840 850,700 890,500 C905,430 930,370 965,320"
+          fill="none" stroke="#17171A" stroke-width="62" stroke-linecap="round"/>
+    <path d="M450,852 C660,840 850,700 890,500 C905,430 930,370 965,320"
+          fill="none" stroke="#A32638" stroke-width="44" stroke-linecap="round"/>
+    <polygon points="1019,242 1014,354 916,286" fill="#A32638" stroke="#17171A" stroke-width="10" stroke-linejoin="round"/>
+  </g>
+</svg>
