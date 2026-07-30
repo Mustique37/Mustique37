@@ -1,11 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="24/7 logo in cirkel met pijl naar rechts">
-  <circle cx="256" cy="256" r="228" fill="none" stroke="#1A1A1A" stroke-width="20"/>
-  <text x="256" y="268" text-anchor="middle"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 440" width="680" height="440" role="img" aria-label="24/7 logo met scythe en pijl naar rechts">
+  <g>
+    <path d="M160,414 C164,344 170,300 182,256 C194,214 202,196 202,164 C202,138 196,116 190,98"
+          fill="none" stroke="#3A3A44" stroke-width="19" stroke-linecap="round"/>
+    <path d="M188,90 C280,26 420,18 512,66 C556,88 584,124 598,170 C566,138 532,116 494,104 C400,80 290,96 198,126 Z"
+          fill="#A7AAB3"/>
+    <path d="M188,90 C280,26 420,18 512,66 C556,88 584,124 598,170 C590,150 570,128 546,112 C470,52 350,44 250,72 C226,79 205,85 188,90 Z"
+          fill="#70737C"/>
+    <polygon points="192,76 216,100 192,124 168,100" fill="#A21C1C"/>
+    <polygon points="149,404 175,404 162,438" fill="#A21C1C"/>
+  </g>
+  <text x="410" y="300" text-anchor="middle"
         font-family="'Arial Black', Arial, Helvetica, sans-serif"
-        font-weight="900" font-size="130" letter-spacing="2"
+        font-weight="900" font-size="140" letter-spacing="2"
         fill="#1A1A1A">24/7</text>
   <g fill="#1A1A1A">
-    <rect x="136" y="318" width="200" height="20" rx="10"/>
-    <polygon points="326,298 386,328 326,358"/>
+    <rect x="272" y="336" width="230" height="20" rx="10"/>
+    <polygon points="492,316 556,346 492,376"/>
   </g>
 </svg>
