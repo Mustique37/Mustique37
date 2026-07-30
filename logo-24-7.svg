@@ -1,10 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-label="24/7 logo met pijl naar rechts">
-  <text x="320" y="212" text-anchor="middle"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="24/7 logo in cirkel met pijl naar rechts">
+  <circle cx="256" cy="256" r="228" fill="none" stroke="#1A1A1A" stroke-width="20"/>
+  <text x="256" y="268" text-anchor="middle"
         font-family="'Arial Black', Arial, Helvetica, sans-serif"
-        font-weight="900" font-size="170" letter-spacing="4"
+        font-weight="900" font-size="130" letter-spacing="2"
         fill="#1A1A1A">24/7</text>
   <g fill="#1A1A1A">
-    <rect x="130" y="262" width="330" height="22" rx="11"/>
-    <polygon points="450,240 520,273 450,306"/>
+    <rect x="136" y="318" width="200" height="20" rx="10"/>
+    <polygon points="326,298 386,328 326,358"/>
   </g>
 </svg>
