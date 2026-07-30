@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-label="24/7 logo met pijl naar rechts">
+  <text x="320" y="212" text-anchor="middle"
+        font-family="'Arial Black', Arial, Helvetica, sans-serif"
+        font-weight="900" font-size="170" letter-spacing="4"
+        fill="#1A1A1A">24/7</text>
+  <g fill="#1A1A1A">
+    <rect x="130" y="262" width="330" height="22" rx="11"/>
+    <polygon points="450,240 520,273 450,306"/>
+  </g>
+</svg>
