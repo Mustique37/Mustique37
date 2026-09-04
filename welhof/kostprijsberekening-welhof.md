@@ -222,23 +222,63 @@ toestellen ≈ 9 m³) – **gewicht wel**.
 
 ---
 
-## 6. Aanvoer NL → hub Gent: laat Welhof leveren
+## 6. Aanvoer: eigen linehaul Nederland → hub Gent
 
-Mourad biedt twee mogelijkheden. Het verschil is groot:
+Het model dat wij voorstellen en dat Kaan in zijn eerste mail al aankaartte: **onze eigen
+trekker-oplegger haalt op bij Welhof in Nederland, we slaan over in onze hub in Gent, en de
+distributie in België gebeurt met de 3,5 t bakwagens.** Mourad liet die keuze open ("jullie kunnen
+bij ons ophalen op frequente basis, in overleg"), dus wij bepalen de frequentie.
 
-| Scenario | Kost voor ons |
+### Kostprijs per linehaul-rit
+
+Aannames: 400 km heen en terug, 9 u, verbruik 30 l/100 km, diesel € 1,55/l netto na terugbetaling
+professionele diesel.
+
+| Post | € |
 |---|---:|
-| **Wij halen op met trekker-oplegger** | € 600 – 750 per rit; bij 3 ritten/week ± € 8.000/maand |
-| **Welhof levert aan in Gent** | € 0 transport, enkel handling |
+| Loon chauffeur C+E, 9 u incl. patronale kost | 260 |
+| Trekker + oplegger (lease, verzekering, taks), ÷ 21 dagen | 90 |
+| Brandstof (400 km) | 186 |
+| Onderhoud + banden (€ 0,15/km) | 60 |
+| Kilometerheffing België (± 120 km op BE-grondgebied) | 18 |
+| **Directe kost** | **614** |
+| Overhead 18 % | 110 |
+| **Kostprijs per rit** | **724** |
+| **Tarief** | **850** (marge 15 %) |
 
-**Kies voor aanlevering door Welhof in Gent.** Hij heeft dit zelf aangeboden ("We kunnen dagelijks
-leveren"). Op 500 stops scheelt dit ± € 16 per stop – dat is het verschil tussen een gezond en een
-onhoudbaar dossier. Als hij toch wil dat wij ophalen, moet dat een aparte lijn worden op de
-offerte, niet iets dat in het stoptarief verdwijnt.
+> **Nog na te kijken vóór we dit vastklikken:** het exacte adres van het DC van Welhof (bepaalt de
+> afstand) en de Nederlandse vrachtwagenheffing op het NL-traject. Die heffing zit **niet** in
+> bovenstaande tabel. Zet in de offerte daarom "op basis van 400 km heen en terug, afwijkende
+> afstand in overleg" — dan kunnen we corrigeren zodra we het adres kennen.
 
-Retourtoestellen gaan mee terug op diezelfde shuttle – zo blijft de afvalverwerking bij Welhof.
+### Hoeveel ritten hebben we nodig?
 
----
+Een oplegger neemt ± 100 à 120 toestellen. **Volume is hier bindend, niet gewicht** — omgekeerd dus
+aan de bakwagen. Bij 500 stops rekenen we op ± 600 toestellen per maand (gemiddeld 1,2 toestel per
+stop).
+
+| Frequentie | Ritten/maand | Kost/maand | Per stop | Doorlooptijd order → levering |
+|---|---:|---:|---:|---|
+| 1 × per week | 4,3 | € 3.655 | € 7,30 | 5–7 dagen |
+| **2 × per week** | **8,6** | **€ 7.310** | **€ 14,60** | **2–4 dagen** |
+| 3 × per week | 13 | € 11.050 | € 22,10 | 1–3 dagen |
+
+**Advies: 2 ritten per week.** Dat houdt de doorlooptijd voor de eindklant aanvaardbaar én de kost
+beheersbaar. Eén rit per week is het goedkoopst, maar vraagt dat Welhof een volle week voorraad bij
+ons plaatst — bespreekbaar, maar dan moet die opslag apart vergoed worden (± 90 m³, zie het
+opslagtarief).
+
+> **Dit moet een aparte lijn op de offerte zijn, geen verborgen kost in het stoptarief.** Bij 500
+> stops en 2 ritten per week gaat het om ± € 7.300 per maand — ruim een vijfde van de
+> dossieromzet. Verdwijnt dat in het dagtarief, dan is de marge op de distributie weg.
+
+### Meegenomen voordeel: de vergunningsvraag verschuift naar de linehaul
+
+De trekker-oplegger rijdt internationaal en heeft sowieso Eurovergunning, tachograaf en code 95 —
+dat hebben wij. Doordat de goederen in Gent worden overgeslagen, doen de 3,5 t bakwagens
+**uitsluitend nationaal Belgisch vervoer** en blijven ze vrijgesteld van vergunning en tachograaf.
+Het hub-model lost dus meteen het vergunningsprobleem op voor het volledige Belgische luik (zie
+punt 7).
 
 ## 7. Regelgeving – vier punten om vóór de opstart te regelen
 
@@ -274,10 +314,19 @@ Retourtoestellen gaan mee terug op diezelfde shuttle – zo blijft de afvalverwe
 | Voertuig | 3,5 t bakwagen, rijbewijs B, alu opbouw, laadklep 750 kg |
 | Vloot bij 500 stops | 2 bakwagens | 
 | Vloot bij 700 stops | 3 bakwagens |
-| Aanvoer | Welhof levert in Gent – wij halen niet op |
+| Linehaul NL → Gent | **€ 850 per rit**, advies 2 ritten per week |
+| Aanvoer | Eigen trekker-oplegger haalt op bij Welhof, overslag in hub Gent |
 | Fase 1 | België |
 | Fase 2 | Zeeland + NL-Limburg, na Eurovergunning + tachograaf |
 
-**Verwachte omzet bij 500 stops:** ± 23 teamdagen 2-mans × € 820 + 12,5 teamdagen 1-mans × € 580
-= **± € 26.100/maand**, plus handling ± € 1.500 = **± € 27.600/maand**.
-**Bij 700 stops:** **± € 38.000/maand**.
+**Verwachte omzet bij 500 stops**
+
+| | |
+|---|---:|
+| Distributie: 23 teamdagen 2-mans × € 820 + 12,5 teamdagen 1-mans × € 580 | € 26.200 |
+| Handling hub: ± 600 toestellen × € 2,95 | € 1.800 |
+| Linehaul: 8,6 ritten × € 850 | € 7.300 |
+| **Totaal per maand** | **± € 35.300** |
+
+**Bij 700 stops:** ± € 36.600 distributie + € 2.500 handling + € 11.050 linehaul (3 ritten/week)
+= **± € 50.200 per maand**.

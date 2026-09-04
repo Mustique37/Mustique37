@@ -50,23 +50,32 @@ handtekening, en dagelijkse terugkoppeling.
 | Vanaf 600 stops per maand | – 3 % |
 | Vanaf 800 stops per maand | – 5 % |
 
-**Hub Gent**
+**Aanvoer vanuit Nederland en hub Gent**
 
 | Dienst | Tarief |
 |---|---:|
+| Ophaling met trekker-oplegger bij jullie DC, lossen in onze hub in Gent, per rit | € 850 |
 | Handling in- en uitslag per toestel | € 2,95 |
 | Opslag na 7 kalenderdagen | € 12 per pallet per week |
+
+Het rittarief is gebaseerd op 400 km heen en terug; laat ons het adres van jullie
+distributiecentrum weten, dan bevestigen wij de prijs. Een oplegger neemt ± 100 à 120 toestellen.
+Bij de volumes die je noemt stellen wij **twee ophalingen per week** voor: dat houdt de doorlooptijd
+voor jullie eindklant op twee à vier dagen. Eén ophaling per week kan ook en is goedkoper, maar
+vraagt dat er ongeveer een week voorraad bij ons staat.
 
 Bij de mix die jij beschrijft komen beide formules op een vergelijkbaar niveau uit. Het dagtarief is
 voor jullie doorgaans het voordeligst, omdat wij dan de planning maximaal kunnen optimaliseren.
 
-## Aanvoer
+## Werkwijze aanvoer
 
-Wij stellen voor dat jullie de goederen aanleveren in onze hub in Gent, zoals je zelf voorstelde.
-Dat is voor beide partijen de efficiëntste oplossing en houdt het tarief per levering het laagst.
-De retourtoestellen en het verpakkingsmateriaal gaan mee terug op dezelfde shuttle, zodat de
-Recupel-stroom bij jullie blijft. Wil je liever dat wij ophalen in Nederland, dan maken wij daar
-graag een aparte prijs voor.
+Wij halen op met onze eigen trekker-oplegger bij jullie in Nederland, slaan over in onze hub in
+Gent en verdelen van daaruit in België met bakwagens met laadlift. Zo blijft de aansturing volledig
+bij ons en kunnen wij de ritten optimaal vullen. De retourtoestellen en het verpakkingsmateriaal
+gaan mee terug op dezelfde oplegger, zodat de Recupel-stroom bij jullie blijft.
+
+Verkiezen jullie toch om zelf dagelijks aan te leveren in Gent, dan vervalt het ophaaltarief
+uiteraard.
 
 ## Voorwaarden
 
