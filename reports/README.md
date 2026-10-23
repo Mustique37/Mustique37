@@ -13,6 +13,5 @@ Regels:
 - Een stop telt bij chauffeur en bijrijder.
 - "Niet uitgepakt" = stop met "niet uitgepakt" aangeduid, behalve als de reden toont dat uitpakken niet van toepassing was
   (afhaling in de winkel, interventie, installatie wel gebeurd). Percentage op de afzetten zonder installatie.
-- "Niet zelf afgesloten" = rit als chauffeur die het systeem om 20:00 afsloot (Click & Collect 16:30), of die pas de dag erna werd afgesloten.
-- Ritten die de dispatch achteraf aanmaakte, tellen niet mee voor afsluiten en open stops.
+- Ritten die de dispatch achteraf aanmaakte, tellen niet mee voor open stops.
 - Klachten = klachtdossiers over ritten in de periode, plus dossiers die in de periode binnenkwamen over oudere ritten.

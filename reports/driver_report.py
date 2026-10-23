@@ -39,7 +39,6 @@ def build(data, title, period):
         tile(nl(T['ritten']), 'ritten', f"{T['ic']} thuislevering · {T['cc']} Click & Collect"),
         tile(nl(S['stops']), 'stops', f"{nl(S['inst'])} installaties · {nl(S['afzet'])} afzetten"),
         tile(fp(avg), 'niet uitgepakt', f"{nu_echt} van {nl(S['afzet'])} afzetten · {S['nu_klant']} op vraag klant"),
-        tile(f"{T['auto']}", 'ritten niet zelf afgesloten', f"van {T['eigen']} ritten ({fp(pct(T['auto'], T['eigen']))})"),
         tile(f"{S['pend']}", 'stops niet afgewerkt in app', 'op afgesloten ritten'),
         tile(f"{sum(1 for k in (data.get('klachten') or []) if k['rit_in_periode'])}", 'klachten over deze periode', f"{sum(1 for k in (data.get('klachten') or []) if not k['rit_in_periode'])} binnengekomen over oudere ritten"),
         tile(f"{S['rating'] or '–'}".replace('.', ','), 'klantscore op 5', f"{S['n_rating']} beoordelingen"),
@@ -57,14 +56,10 @@ def build(data, title, period):
     ov = sorted(people, key=lambda p: (-p['stops'], -(p['rc'] + p['rb'])))
     r2 = ''.join(
         f"<tr><td>{e(p['naam'])}</td><td>{p['rc']} / {p['rb']}</td><td>{p['stops']}</td><td>{p['inst']}</td><td>{p['afzet']}</td>"
-        f"<td class='{cls(p)}'>{p['nu_echt']} · {fp(p['pct'])}</td><td class='{'bad' if p['auto'] and p['auto'] >= max(1, p['rc_eigen'] * 0.5) else ''}'>{p['auto']} / {p['rc_eigen']}</td>"
+        f"<td class='{cls(p)}'>{p['nu_echt']} · {fp(p['pct'])}</td>"
         f"<td class='{'bad' if p['pend'] >= 5 else ''}'>{p['pend']}</td><td>{p['afw']}</td><td class='{'bad' if p['klachten'] else ''}'>{p['klachten']}</td><td>{(str(p['rating']).replace('.', ',') + ' (' + str(p['n_rating']) + ')') if p['n_rating'] else '–'}</td></tr>"
         for p in ov)
 
-    # 3. niet correct afgesloten
-    ac = sorted([p for p in people if p['rc_eigen']], key=lambda p: (-p['auto'], -pct(p['auto'], p['rc_eigen'])))
-    r3 = ''.join(f"<tr class='{'bad' if p['auto'] >= max(1, p['rc_eigen'] * 0.5) else ''}'><td>{e(p['naam'])}</td><td><b>{p['auto']}</b></td><td>{p['rc_eigen']}</td><td>{fp(pct(p['auto'], p['rc_eigen']))}</td><td>{p['auto_begonnen']}</td></tr>" for p in ac)
-    autolist = ', '.join(f"{a['dag']} {e(a['chauffeur'] or '?')}" for a in (data.get('auto_ritten') or []))
 
     # 4. stops niet afgewerkt
     r4 = ''.join(f"<tr><td>{e(x['dag'])}</td><td>{e(x['ride_number'])}</td><td>{e(x['ploeg'])}</td><td><b>{x['pending']}</b></td></tr>" for x in (data.get('pending_ritten') or [])) or "<tr><td colspan='4'>Geen</td></tr>"
@@ -79,7 +74,7 @@ def build(data, title, period):
     def wlabel(w):
         d0 = max(dt.date.fromisoformat(w), pv); d1 = min(dt.date.fromisoformat(w) + dt.timedelta(days=6), pt)
         return f"{d0:%d/%m} – {d1:%d/%m}"
-    r6 = ''.join(f"<tr><td>{wlabel(w['wk'])}</td><td>{w['ritten']}</td><td>{w['stops']}</td><td>{w['afzet']}</td><td>{w['nu']}</td><td>{fp(pct(w['nu'], w['afzet']))}</td><td>{w['auto']}</td></tr>" for w in wk)
+    r6 = ''.join(f"<tr><td>{wlabel(w['wk'])}</td><td>{w['ritten']}</td><td>{w['stops']}</td><td>{w['afzet']}</td><td>{w['nu']}</td><td>{fp(pct(w['nu'], w['afzet']))}</td></tr>" for w in wk)
 
     # bijlage: lijst niet uitgepakt
     rl = ''.join(f"<tr class='{'muted' if x['cat']=='nvt' else ''}'><td>{e(x['dag'])}</td><td>{e(x['ride_number'])}</td><td>{e(x['customer_name'])}<br><span class='small'>{e(x['city'])}</span></td><td>{e(x['ploeg'])}</td><td>{e(CAT.get(x['cat'], x['cat']))}</td><td>{e((x['reden'] or '(geen reden)')[:180])}</td></tr>" for x in (data.get('niet_uitgepakt') or []))
@@ -94,16 +89,12 @@ def build(data, title, period):
             lines.append(f"Stops: {p['stops']} ({p['inst']} installaties, {p['afzet']} afzetten)")
             lines.append(f"Niet uitgepakt: {p['nu_echt']} ({fp(p['pct'])} van je afzetten, gemiddelde {fp(avg)})")
             lines.append(f"Stops niet afgewerkt in de app: {p['pend']}")
-        if p['rc_eigen']:
-            lines.append(f"Ritten niet zelf afgesloten: {p['auto']} van {p['rc_eigen']}")
         lines.append(f"Klachten: {p['klachten']}")
         if p['n_rating']:
             lines.append(f"Klantscore: {str(p['rating']).replace('.', ',')}/5 ({p['n_rating']} beoordelingen)")
         tips = []
         if p['afzet'] and p['pct'] > avg and p['nu_echt'] >= 3:
             tips.append("Pak elk toestel uit bij de klant. Alleen als de klant het echt weigert, laat je het verpakt en noteer je duidelijk waarom.")
-        if p['rc_eigen'] and p['auto']:
-            tips.append("Sluit je rit elke dag zelf af in de app, meteen na je laatste stop.")
         if p['pend']:
             tips.append("Werk elke stop af in de app: foto's, uitpakken en handtekening.")
         if p['klachten']:
@@ -127,7 +118,7 @@ def build(data, title, period):
 h1{font-size:17pt;color:#0f2a4a;margin:0 0 1mm} .sub{color:#374151;font-size:9.5pt;margin-bottom:4mm}
 h2{font-size:11.5pt;color:#0f2a4a;margin:6mm 0 2mm;padding-bottom:1mm;border-bottom:1.5px solid #dbe3ee;break-after:avoid}
 p{margin:0 0 2mm} .note{font-size:7.8pt;color:#4b5563} .small{font-size:7pt;color:#6b7280}
-.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:2.5mm;margin-bottom:2mm}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5mm;margin-bottom:2mm}
 .tile{border:1px solid #dbe3ee;border-radius:2mm;padding:2.2mm 2.8mm;background:#f8fafc}
 .tile .v{font-size:15pt;font-weight:700;color:#0f2a4a} .tile .l{font-weight:600;font-size:8.2pt} .tile .s{font-size:7.2pt;color:#6b7280}
 table{width:100%;border-collapse:collapse;font-size:7.9pt;margin:1mm 0 2mm}
@@ -140,7 +131,7 @@ tr.bad td, td.bad{background:#fde8e8} tr.warn td, td.warn{background:#fff6e0} tr
     body = f"""
 <div class="top"><div class="brand">INTERCARGO</div><div class="meta">{e(period)}</div></div>
 <h1>{e(title)}</h1>
-<div class="sub">Bron: onze app. Ritten, stops, notities bij niet uitpakken, afsluiting van de ritten en klachtdossiers.</div>
+<div class="sub">Bron: onze app. Ritten, stops, notities bij niet uitpakken en klachtdossiers.</div>
 <div class="tiles">{tiles}</div>
 <p class="note">Een stop telt bij beide ploegleden: chauffeur en bijrijder. “Niet uitgepakt” telt de stops waarbij de ploeg “niet uitgepakt” aanduidde, behalve wanneer de reden toont dat uitpakken niet van toepassing was, zoals afhaling in de winkel, een interventie of een installatie die wel gebeurde. Het percentage is berekend op de afzetten zonder installatie.</p>
 
@@ -149,22 +140,18 @@ tr.bad td, td.bad{background:#fde8e8} tr.warn td, td.warn{background:#fff6e0} tr
 <p class="note">Rood = minstens anderhalve keer het gemiddelde van {fp(avg)}. Oranje = boven het gemiddelde. De redenen per stop staan in bijlage A.</p>
 
 <h2>2. Overzicht per persoon</h2>
-<table><tr><th>Naam</th><th>Ritten chauf. / bijr.</th><th>Stops</th><th>Install.</th><th>Afzetten</th><th>Niet uitgepakt</th><th>Niet zelf afgesloten</th><th>Stops niet in app</th><th>Afwijk.</th><th>Klachten</th><th>Klantscore</th></tr>{r2}</table>
-<p class="note">“Niet zelf afgesloten” telt de ritten als chauffeur die het systeem om 20:00 afsloot (Click &amp; Collect 16:30), of die pas de dag erna werden afgesloten. “Afwijkingen” zijn stops met een afwijkingscode; die liggen niet altijd aan de ploeg.</p>
+<table><tr><th>Naam</th><th>Ritten chauf. / bijr.</th><th>Stops</th><th>Install.</th><th>Afzetten</th><th>Niet uitgepakt</th><th>Stops niet in app</th><th>Afwijk.</th><th>Klachten</th><th>Klantscore</th></tr>{r2}</table>
+<p class="note">“Afwijkingen” zijn stops met een afwijkingscode; die liggen niet altijd aan de ploeg.</p>
 
-<h2>3. Ritten niet zelf afgesloten</h2>
-<table><tr><th>Chauffeur</th><th>Niet zelf afgesloten</th><th>Ritten als chauffeur</th><th>%</th><th>Wel begonnen met afsluiten</th></tr>{r3}</table>
-<p class="note">“Wel begonnen met afsluiten”: de chauffeur startte het afsluiten in de app, maar rondde het niet af.</p>
-
-<h2>4. Stops niet afgewerkt in de app</h2>
+<h2>3. Stops niet afgewerkt in de app</h2>
 <table><tr><th>Dag</th><th>Rit</th><th>Ploeg</th><th>Stops open</th></tr>{r4}</table>
 <p class="note">Stops die nog op “wachtend” stonden toen de rit afgesloten werd. Ritten die de dispatch zelf aanmaakte, tellen niet mee.</p>
 
-<h2>5. Klachten</h2>
+<h2>4. Klachten</h2>
 <table><tr><th>Binnen</th><th>Ritdag</th><th>Chauffeur</th><th>Bijrijder</th><th>Klacht</th><th>Status</th></tr>{r5}</table>
 <p class="note">Rood = klacht over een rit in deze periode. De andere klachten kwamen in deze periode binnen maar gaan over oudere ritten.</p>
 
-{('<h2>6. Per week</h2><table><tr><th>Week (zo – za)</th><th>Ritten</th><th>Stops</th><th>Afzetten</th><th>Niet uitgepakt</th><th>%</th><th>Niet zelf afgesloten</th></tr>' + r6 + '</table>') if len(wk) > 1 else ''}
+{('<h2>5. Per week</h2><table><tr><th>Week (zo – za)</th><th>Ritten</th><th>Stops</th><th>Afzetten</th><th>Niet uitgepakt</th><th>%</th></tr>' + r6 + '</table>') if len(wk) > 1 else ''}
 
 <h2 class="pb">Bijlage A – Alle stops niet uitgepakt</h2>
 <table><tr><th>Dag</th><th>Rit</th><th>Klant</th><th>Ploeg</th><th>Soort</th><th>Reden volgens de ploeg</th></tr>{rl}</table>
